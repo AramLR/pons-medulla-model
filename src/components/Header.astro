@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import logo from "@images/logo.jpg"
+import LevelIndicator from '@components/LevelIndicator.astro'
 
 interface Props {
   pageTitle: string
@@ -10,9 +10,15 @@ const { pageTitle } = Astro.props
 
 ---
 
-<header class="bg-uaslp flex h-20 items-center p-2">
+<header class="bg-uaslp h-20 p-2 flex flex-col md:flex-row md:items-center">
   
-  <img src={logo.src} alt="UASLP Facultad de Medicina logo" class="h-full">
+  <div class="flex items-center h-17 m-0">
+    <img src={logo.src} alt="UASLP Facultad de Medicina logo" class="h-full">
 
-  <h1 class="text-slate-100 font-bold text-2xl ml-3">{pageTitle}</h1>
-</header>
+    <h1 class="text-slate-100 font-bold text-2xl ml-3">{pageTitle}</h1>
+
+  </div>
+  
+  <LevelIndicator levels={["D1", "D2"]}/>
+ </header>
+
