@@ -3,11 +3,23 @@ interface Props {
   levels: string[]
 }
 
-const current = 1
-const { levels } = Astro.props
 ---
 
-<div class="text-center border-uaslp border shadow-2xs w-4/5
-rounded-md self-center my-3 md:bg-slate-100 mx-10 md:w-2/5">
-<em>Level {current}/{levels.length}: {levels[current-1]}</em>
-</div>
+<select name="levelSelector" id="levelSelector" class="mx-5 my-5 bg-slate-100 rounded-md
+border border-uaslp shadow-2xl">
+  <option value="home">Inicio</option>
+  <optgroup label="Médula oblongada (Bulbo raquídeo)">
+    <option value="dec_piramides">Decusación de las piramides</option>
+    <option value="dec_lemniscos">Decusación de los lemniscos</option>
+    <option value="olivas">Olivas</option>
+    <option value="inf_puente">Inferior al puente</option>
+  </optgroup>
+  <optgroup label="Puente">
+    <option value="coliculo_facial">Coliculo facial</option>
+    <option value="trigemino">Nucleos del trigemino</option>
+  </optgroup>
+  <optgroup label="Puente">
+    <option value="coliculo_inferior">Coliculo inferior</option>
+    <option value="coliculo_superior">Coliculo superior</option>
+  </optgroup>
+</select>
