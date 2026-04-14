@@ -1,17 +1,43 @@
 ---
+import Layout from "@layouts/Layout.astro"
+
+
+const teamMembers = [
+  "Gomez Campero Rafael",
+  "Gonzalez Rocha Uriel",
+  "Grimaldo Hernandez Scarlett Gioconda",
+  "Guell Segura Ana Sofia",
+  "Guerrero Morales Daniela Montserrat",
+  "Gutierrez Rodriguez Ofelia",
+  "Hernandez Herrera Ana Valeria",
+  "Hernandez Lara Aram",
+  "Avila Fernandez Sandra Paola"
+]
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout pageTitle="Proyecto de creación
+de modelos de Neuroanatomía: Puente y Mesencéfalo, núcleos y tractos
+de salida.">
+
+<p>
+  Bienvenido a nuestro proyecto de Neuroanatomía.
+</p>
+<br>
+<p>
+  Hemos creado un modelo que muestra las vías de salida
+  del puente y mesencéfalo con el objetivo de favorecer
+  la comprensión tridimensional de las estructuras mencionadas.
+</p>
+<br>
+<p>
+  Usa el selector de arriba para navegar entre los diferentes niveles.
+</p>
+
+<br>
+<h2 class="font-bold">Integrantes</h2>
+<br>
+<ul class="list-disc">
+  {teamMembers.map((member) => <li class="list-disc list-inside">{member.toUpperCase()}</li>)}
+</ul>
+</Layout>
