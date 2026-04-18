@@ -25,18 +25,64 @@ justify-stretch hidden"
     >
   </label>
   <a href="/" class="text-slate-100 p-4">Bienvenida</a>
-  <a href="/levels" class="text-slate-100 p-4">Decusación de las pirámides</a>
-  <a href="/levels" class="text-slate-100 p-4">Decusación de los lemniscos</a>
-  <a href="/levels" class="text-slate-100 p-4">Núcleos olivares</a>
-  <a href="/levels" class="text-slate-100 p-4">Por debajo del puente</a>
-  <a href="/levels" class="text-slate-100 p-4">Colículo facial</a>
-  <a href="/levels" class="text-slate-100 p-4">Núcleos del trigémino</a>
-  <a href="/levels" class="text-slate-100 p-4">Colículos inferiores</a>
-  <a href="/levels" class="text-slate-100 p-4">Colículos superiores</a>
+
+  <!-- Médula oblongada -->
+  <input type="checkbox" id="category-medula" class="hidden" />
+  <label for="category-medula" class="text-slate-100 p-4 cursor-pointer font-bold flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+    Médula oblongada
+  </label>
+  <div class="category-items hidden">
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Decusación de las pirámides</a>
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Decusación de los lemniscos</a>
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Núcleos olivares</a>
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Por debajo del puente</a>
+  </div>
+
+  <!-- Puente -->
+  <input type="checkbox" id="category-puente" class="hidden" />
+  <label for="category-puente" class="text-slate-100 p-4 cursor-pointer font-bold flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+    Puente
+  </label>
+  <div class="category-items hidden">
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Colículo facial</a>
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Núcleos del trigémino</a>
+  </div>
+
+  <!-- Meséncefalo -->
+  <input type="checkbox" id="category-mesencefalo" class="hidden" />
+  <label for="category-mesencefalo" class="text-slate-100 p-4 cursor-pointer font-bold flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+    Meséncefalo
+  </label>
+  <div class="category-items hidden">
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Colículos inferiores</a>
+    <a href="/levels" class="text-slate-100 p-4 pl-8">Colículos superiores</a>
+  </div>
 </ul>
 
 <style>
   #nav-toggle:checked ~ ul {
     display: flex;
+  }
+
+  #category-medula:checked + label + .category-items,
+  #category-puente:checked + label + .category-items,
+  #category-mesencefalo:checked + label + .category-items {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  #category-medula:checked + label svg,
+  #category-puente:checked + label svg,
+  #category-mesencefalo:checked + label svg {
+    transform: rotate(180deg);
   }
 </style>
