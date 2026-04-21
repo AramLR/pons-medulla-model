@@ -24,5 +24,3 @@ structures:
     { id: 18, name: "Surco medio posterior" },
   ]
 ---
-
-![decusación de las piramides](../img/test.jpg)
