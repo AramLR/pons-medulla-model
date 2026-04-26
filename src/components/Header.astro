@@ -6,8 +6,6 @@ interface Props {
   pageTitle: string
 }
 
-const { pageTitle } = Astro.props
-
 const pathName = Astro.url.pathname
 
 function getPath(){
@@ -20,17 +18,5 @@ function getPath(){
 
 ---
 
-<header class="bg-uaslp h-20 p-2 flex flex-col md:flex-row md:items-center w-full">
-  
-  <div class="flex items-center h-17 m-0 w-full">
-    <img src={logo.src} alt="UASLP Facultad de Medicina logo" class="h-full">
-
-    <h1 class="text-slate-100 font-bold text-sm ml-3">Mesa 6 Proyecto de Neuroanatomía</h1>
-
 <Nav/>
-  </div>
-  
- </header>
-
-<h2 class="text-center text-xl mt-15 font-bold">{pageTitle}</h2>
-
+<h1 class="text-2xl font-bold text-center">{getPath()}</h1>
