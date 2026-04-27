@@ -7,17 +7,36 @@ import coliculo_s from "@images/coliculo_superior.svg?raw"
 export const getStaticPaths = (async () => {
 const levels =  await getCollection('levels')
   
-return levels.map((level) => {
 
+
+return levels.map((level) => {
+  
   return {
     params: { id: level.id},
     props: { level }
   }
 })
-  
+
 }) satisfies GetStaticPaths;
 
 const { level } = Astro.props
+const allSvgs = import.meta.glob("../../img/*.svg",
+  {
+    query: "?raw",
+    import: "default"
+  }
+)
+
+const svgPath = level.data.svgPath ? `/src/img/${level.data.svgPath}` : null;
+console.log("Level ID:", level.id);
+console.log("SVG Path from data:", level.data.svgPath);
+console.log("Looking for:", svgPath);
+console.log("Available keys:", Object.keys(allSvgs));
+
+// Find the matching key dynamically
+const svgKey = svgPath ? Object.keys(allSvgs).find(key => key.endsWith(level.data.svgPath)) : null;
+console.log("Found key:", svgKey);
+const svgContent = svgKey ? await allSvgs[svgKey]() : null;
 
 const sortedStructures = [...level.data.structures].sort((a, b) => {
   if(a.id < b.id){
@@ -27,38 +46,55 @@ const sortedStructures = [...level.data.structures].sort((a, b) => {
   }
 })
 
+console.log(svgPath in allSvgs)
+
 const imageUrl = level.data.imgUrl.src;
 
-console.log(imageUrl)
+console.log(allSvgs)
 ---
 
 <Layout pageTitle={level.data.name}>
-  <div class="w-full px-1 sm:px-1 md:px-8 py-6 sm:py-8">
-    <!-- Image Section -->
+  <div class="w-full px-2 sm:px-4 md:px-8 py-6 sm:py-8">
+    <!-- Responsive Card Section -->
     {imageUrl && (
       <>
-        <div class="flex justify-center mb-4 sm:mb-6">
-          <div class="w-full max-w-4xl">
-            <div class="flex justify-center">
-            <div class="relative inline-block">
-              <img 
-              id="mainImage"
-              src={imageUrl} 
-              alt={level.data.name}
-              class="block w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200 cursor-pointer z-0"
-            />
-            <div class="svg-overlay absolute inset-0 pointer-events-none" set:html={coliculo_s}></div>
-            </div>
-            </div>
-            <div class="flex justify-center mt-3 sm:mt-4">
-              <button 
-                id="expandBtn"
-                class="bg-uaslp hover:bg-opacity-90 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200"
-                aria-label="Expand image"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7 17h3q.425 0 .713.288T11 18t-.288.713T10 19H6q-.425 0-.712-.288T5 18v-4q0-.425.288-.712T6 13t.713.288T7 14zM17 7h-3q-.425 0-.712-.288T13 6t.288-.712T14 5h4q.425 0 .713.288T19 6v4q0 .425-.288.713T18 11t-.712-.288T17 10z"/></svg>
-                Ampliar
-              </button>
+        <div class="flex justify-center mb-8">
+          <div class="card bg-base-100 shadow-xl w-full max-w-5xl lg:card-side">
+            <!-- Image Section -->
+            <figure class="w-full lg:w-2/5 flex-shrink-0">
+              <div class="relative w-full flex items-center justify-center bg-gray-50">
+                <img 
+                  id="mainImage"
+                  src={imageUrl} 
+                  alt={level.data.name}
+                  class="w-full h-auto cursor-pointer hover:opacity-95 transition-opacity z-0"
+                />
+                <div class="svg-overlay absolute inset-0 pointer-events-none" set:html={svgContent}></div>
+              </div>
+            </figure>
+
+            <!-- Card Body Section -->
+            <div class="card-body w-full lg:w-3/5 justify-between">
+              <div>
+                <h2 id="cardTitle" class="card-title text-2xl sm:text-3xl text-gray-900">
+                  {level.data.name}
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-2">
+                  Selecciona una estructura en la imagen
+                </p>
+              </div>
+
+              <!-- Expand Button -->
+              <div class="card-actions justify-start mt-4">
+                <button 
+                  id="expandBtn"
+                  class="btn btn-primary flex items-center gap-2"
+                  aria-label="Expand image"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M7 17h3q.425 0 .713.288T11 18t-.288.713T10 19H6q-.425 0-.712-.288T5 18v-4q0-.425.288-.712T6 13t.713.288T7 14zM17 7h-3q-.425 0-.712-.288T13 6t.288-.712T14 5h4q.425 0 .713.288T19 6v4q0 .425-.288.713T18 11t-.712-.288T17 10z"/></svg>
+                  Ampliar
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -111,6 +147,7 @@ console.log(imageUrl)
     const expandBtn = document.getElementById('expandBtn');
     const closeBtn = document.getElementById('closeBtn');
     const mainImage = document.getElementById('mainImage');
+    const cardTitle = document.getElementById('cardTitle');
 
     expandBtn?.addEventListener('click', () => {
       modal?.classList.remove('hidden');
@@ -155,6 +192,11 @@ structures.forEach((el) => {
 
     // Human-readable name
     const readableName = formatName(el.id);
+
+    // Update card title
+    if (cardTitle) {
+      cardTitle.textContent = readableName;
+    }
 
     console.log("Selected:", readableName);
   });

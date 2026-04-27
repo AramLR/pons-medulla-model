@@ -1,7 +1,8 @@
 ---
 macrostructure: "Pons"
 name: "Núcleos del trigémino"
-imgUrl: "../img/test.jpg"
+imgUrl: "../img/nucleos_trigemino.png"
+svgPath: "nucleos_trigemino.svg"
 structures:
   [
     { id: 1, name: "Fascículo longitudinal medial" },

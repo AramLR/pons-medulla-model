@@ -2,6 +2,7 @@
 macrostructure: "Midbrain"
 name: "Colículo superior"
 imgUrl: "../img/coliculo_superior.png"
+svgPath: "coliculo_superior.svg"
 structures:
   [
     { id: 1, name: "Lemnisco trigeminal" },
