@@ -28,14 +28,9 @@ const allSvgs = import.meta.glob("../../img/*.svg",
 )
 
 const svgPath = level.data.svgPath ? `/src/img/${level.data.svgPath}` : null;
-console.log("Level ID:", level.id);
-console.log("SVG Path from data:", level.data.svgPath);
-console.log("Looking for:", svgPath);
-console.log("Available keys:", Object.keys(allSvgs));
 
 // Find the matching key dynamically
 const svgKey = svgPath ? Object.keys(allSvgs).find(key => key.endsWith(level.data.svgPath)) : null;
-console.log("Found key:", svgKey);
 const svgContent = svgKey ? await allSvgs[svgKey]() : null;
 
 const sortedStructures = [...level.data.structures].sort((a, b) => {
@@ -46,11 +41,7 @@ const sortedStructures = [...level.data.structures].sort((a, b) => {
   }
 })
 
-console.log(svgPath in allSvgs)
-
 const imageUrl = level.data.imgUrl.src;
-
-console.log(allSvgs)
 ---
 
 <Layout pageTitle={level.data.name}>
@@ -77,11 +68,8 @@ console.log(allSvgs)
             <div class="card-body w-full lg:w-3/5 justify-between">
               <div>
                 <h2 id="cardTitle" class="card-title text-2xl sm:text-3xl text-gray-900">
-                  {level.data.name}
+                  Selecciona una estructura para continuar
                 </h2>
-                <p class="text-gray-600 text-sm sm:text-base mt-2">
-                  Selecciona una estructura en la imagen
-                </p>
               </div>
 
               <!-- Expand Button -->
@@ -197,8 +185,6 @@ structures.forEach((el) => {
     if (cardTitle) {
       cardTitle.textContent = readableName;
     }
-
-    console.log("Selected:", readableName);
   });
 });
   </script>
