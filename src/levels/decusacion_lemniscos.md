@@ -1,8 +1,9 @@
 ---
 
-imgUrl: "../img/test.jpg"
+imgUrl: "../img/decusacion_lemniscos.png"
 macrostructure: "Medulla"
 name: "Decusación de los lemniscos"
+svgPath: "decusacion_lemniscos_mediales.svg"
 structures: [
 { id: 1, name: "Conducto central" },
 { id: 2, name: "Núcleo hipogloso" },

@@ -60,7 +60,7 @@ const imageUrl = level.data.imgUrl.src;
                   alt={level.data.name}
                   class="w-full h-auto cursor-pointer hover:opacity-95 transition-opacity z-0"
                 />
-                <div class="svg-overlay absolute inset-0 pointer-events-none" set:html={svgContent}></div>
+                <div class="svg-overlay absolute inset-0" set:html={svgContent}></div>
               </div>
             </figure>
 
@@ -155,9 +155,7 @@ const imageUrl = level.data.imgUrl.src;
       }
     });
 
-    const structures = document.querySelectorAll(
-  ".svg-overlay path, .svg-overlay ellipse, .svg-overlay rect"
-);
+    const svgOverlay = document.querySelector(".svg-overlay");
 
 let selectedElement = null;
 
@@ -167,39 +165,90 @@ function formatName(id) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-structures.forEach((el) => {
-  el.addEventListener("click", () => {
-    // Remove previous selection
-    if (selectedElement) {
-      selectedElement.classList.remove("selected");
+function getStructureElement(el) {
+  const excludeIds = ['svg1', 'layer1', 'defs1', 'defs'];
+
+  // First: look upward for the nearest <g> with a valid ID
+  let current = el;
+
+  while (current && !current.classList?.contains('svg-overlay')) {
+    if (
+      current.tagName?.toLowerCase() === "g" &&
+      current.id &&
+      !excludeIds.includes(current.id)
+    ) {
+      return current;
     }
 
-    // Add current selection
-    el.classList.add("selected");
-    selectedElement = el;
+    current = current.parentElement;
+  }
 
-    // Human-readable name
-    const readableName = formatName(el.id);
+  // Fallback: if no group found, use the clicked element itself
+  if (
+    el.id &&
+    !excludeIds.includes(el.id)
+  ) {
+    return el;
+  }
 
-    // Update card title
-    if (cardTitle) {
-      cardTitle.textContent = readableName;
-    }
-  });
+  return null;
+}
+
+svgOverlay?.addEventListener("click", (e) => {
+  const target = getStructureElement(e.target);
+  
+  if (!target) return;
+  
+  // Remove previous selection
+  if (selectedElement) {
+    selectedElement.classList.remove("selected");
+  }
+
+  // Add current selection
+  target.classList.add("selected");
+  selectedElement = target;
+
+  // Human-readable name
+  const readableName = formatName(target.id);
+
+  // Update card title
+  if (cardTitle) {
+    cardTitle.textContent = readableName;
+  }
 });
   </script>
 
 <style is:global>
+.svg-overlay {
+  pointer-events: auto;
+}
+
+.svg-overlay * {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
 .svg-overlay path,
 .svg-overlay ellipse,
-.svg-overlay rect {
+.svg-overlay rect,
+.svg-overlay g {
   fill: transparent !important;
   stroke: transparent !important;
-  cursor: pointer;
-  pointer-events: auto;
   transition: fill 0.2s ease, stroke 0.2s ease;
 }
-.svg-overlay .selected {
+
+.svg-overlay path.selected,
+.svg-overlay ellipse.selected,
+.svg-overlay rect.selected,
+.svg-overlay g.selected {
+  fill: rgba(34, 197, 94, 0.35) !important;
+  stroke: rgb(34, 197, 94) !important;
+  stroke-width: 2;
+}
+
+.svg-overlay g.selected path,
+.svg-overlay g.selected ellipse,
+.svg-overlay g.selected rect{
   fill: rgba(34, 197, 94, 0.35) !important;
   stroke: rgb(34, 197, 94) !important;
   stroke-width: 2;

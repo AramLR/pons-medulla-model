@@ -1,7 +1,8 @@
 ---
-imgUrl: "../img/test.jpg"
+imgUrl: "../img/nucleos_olivares.png"
 macrostructure: "Medulla"
 name: "Parte media de los núcleos olivares"
+svgPath: "nucleos_olivares.svg"
 structures: [
 { id: 1, name: "Fascículo longitudinal medial" },
 { id: 2, name: "Núcleo hipogloso" },
