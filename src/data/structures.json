@@ -578,5 +578,115 @@
     "svg_id": "lemnisco_espinal_izquierdo",
     "name": "Lemnisco espinal izquierdo",
     "description": "Componente del sistema anterolateral situado en el tegmento izquierdo del tronco encefálico, formado por los tractos espinotalámico lateral y anterior izquierdos que conducen dolor, temperatura y tacto burdo del hemicuerpo derecho. Asciende adyacente al lemnisco medial izquierdo para alcanzar el núcleo ventral posterolateral del tálamo izquierdo y los núcleos intralaminares."
+  },
+  {
+    "svg_id": "nucleus_of_oculomotor_nerve",
+    "name": "Núcleo del nervio oculomotor",
+    "description": "Situado en el tegmento mesencefálico a nivel del colículo superior, ventral a la sustancia gris central, inerva los músculos recto superior, recto inferior, recto medial y oblicuo inferior del ojo ipsilateral, así como el elevador del párpado superior. Incluye el núcleo de Edinger-Westphal, de naturaleza parasimpática, cuyas fibras preganglionares viajan con el III par hasta el ganglio ciliar para el reflejo pupilar de acomodación."
+  },
+  {
+    "svg_id": "nucleus_of_throclear_nerve",
+    "name": "Núcleo del nervio troclear",
+    "description": "Situado en el tegmento mesencefálico inferior, a nivel del colículo inferior y ventral al acueducto, sus axones siguen un curso dorsal y caudal, decusándose completamente en el velo medular superior antes de emerger en la cara posterior del tronco encefálico. Inerva el músculo oblicuo superior contralateral, cuya función es la depresión y la inciclotorsión del globo ocular."
+  },
+  {
+    "svg_id": "accesory_nuclei_of_oculomotor_nerve",
+    "name": "Núcleos accesorios del nervio oculomotor",
+    "description": "Corresponden al núcleo de Edinger-Westphal, agrupación de neuronas parasimpáticas preganglionares situada dorsomedialmente al núcleo principal del oculomotor en el tegmento mesencefálico. Sus axones viajan con el III par hasta el ganglio ciliar, desde donde fibras posganglionares cortas inervan el músculo esfínter de la pupila y el músculo ciliar para los reflejos fotomotor y de acomodación."
+  },
+  {
+    "svg_id": "motor_nucleus_of_trigeminal_nerve",
+    "name": "Núcleo motor del nervio trigémino",
+    "description": "Situado en el tegmento del puente, medial al núcleo sensitivo principal del trigémino, sus axones forman la raíz motora del V par que inerva los músculos masticadores, el tensor del tímpano, el tensor del velo del paladar, el milohioideo y el vientre anterior del digástrico ipsilaterales. Recibe proyecciones corticonucleares bilaterales y colaterales del núcleo mesencefálico del trigémino para el arco reflejo del reflejo mandibular."
+  },
+  {
+    "svg_id": "motor_nucleus_of_facial_nerve",
+    "name": "Núcleo motor del nervio facial",
+    "description": "Localizado en el tegmento del puente inferior, sus axones forman el nervio facial (VII par), que rodea dorsalmente el núcleo del abducens creando el colículo facial antes de salir del tronco encefálico por el surco bulbopontino. Inerva todos los músculos de la mímica facial; la porción superior del núcleo recibe proyecciones corticonucleares bilaterales, mientras la inferior solo las recibe contralaterales, hecho que explica la parálisis facial central."
+  },
+  {
+    "svg_id": "nucleus_of_abducens_nerve",
+    "name": "Núcleo del nervio abducens",
+    "description": "Situado en el tegmento del puente inferior, bajo el colículo facial del piso del cuarto ventrículo, inerva el músculo recto lateral ipsilateral a través del VI par craneal. Contiene también interneuronas que, a través del fascículo longitudinal medial contralateral, coordinan la acción del músculo recto medial del lado opuesto durante la mirada lateral conjugada."
+  },
+  {
+    "svg_id": "superior_salivary_nucleus",
+    "name": "Núcleo salival superior",
+    "description": "Agrupación de neuronas parasimpáticas preganglionares situada en el tegmento del puente inferior, cuyos axones viajan con el nervio facial (VII par) y se distribuyen por las ramas del nervio petroso mayor y la cuerda del tímpano. Regula la secreción de las glándulas lagrimal, submandibular y sublingual a través de los ganglios pterigopalatino y submandibular, respectivamente."
+  },
+  {
+    "svg_id": "lacrimal_nucleus",
+    "name": "Núcleo lagrimal",
+    "description": "Núcleo parasimpático preganglionar adyacente al núcleo salival superior en el tegmento pontino, cuyos axones discurren con el nervio intermediario del facial para alcanzar el ganglio pterigopalatino a través del nervio petroso mayor. Las fibras posganglionares inervan la glándula lagrimal y las glándulas mucosas de la nariz y el paladar, regulando la secreción lagrimal y nasal refleja."
+  },
+  {
+    "svg_id": "inferior_salivatory_nucleus",
+    "name": "Núcleo salival inferior",
+    "description": "Agrupación de neuronas parasimpáticas preganglionares ubicada en el tegmento de la médula oblongada superior, cuyos axones viajan con el nervio glosofaríngeo (IX par) por el nervio timpánico y el nervio petroso menor hasta el ganglio ótico. Las fibras posganglionares inervan la glándula parótida, regulando su secreción serosa."
+  },
+  {
+    "svg_id": "nuclei_of_solitary_tract",
+    "name": "Núcleos del tracto solitario",
+    "description": "Columna nuclear que se extiende desde el puente inferior hasta la médula oblongada caudal, lateral al núcleo vagal dorsal, recibiendo aferencias viscerales generales y especiales de los nervios facial (VII), glosofaríngeo (IX) y vago (X), incluyendo el gusto de la lengua y el paladar. La porción caudal integra reflejos cardiovasculares y respiratorios proyectando al hipotálamo y la formación reticular, mientras la rostral proyecta al tálamo para la percepción gustativa consciente."
+  },
+  {
+    "svg_id": "nucleus_of_hypoglossal_nerve",
+    "name": "Núcleo del nervio hipogloso",
+    "description": "Situado en el trigono hipogloso del piso del cuarto ventrículo, próximo a la línea media y dorsal a las pirámides, inerva todos los músculos intrínsecos y la mayoría de los extrínsecos de la lengua a través del nervio hipogloso (XII par). Recibe proyecciones corticonucleares predominantemente contralaterales; su lesión central produce desviación lingual hacia el lado contralateral a la lesión, sin atrofia."
+  },
+  {
+    "svg_id": "dorsal_nucleus_of_vagal_nerve",
+    "name": "Núcleo dorsal del nervio vago",
+    "description": "Núcleo parasimpático preganglionar situado en el trigono vagal del piso del cuarto ventrículo, dorsal al núcleo hipogloso, cuyos axones viajan con el nervio vago (X par) hacia ganglios terminales en las vísceras torácicas y abdominales. Regula la frecuencia cardíaca, la motilidad y las secreciones del tubo digestivo hasta el ángulo esplénico del colon."
+  },
+  {
+    "svg_id": "nucleus_ambiguus",
+    "name": "Núcleo ambiguo",
+    "description": "Columna celular situada profundamente en la formación reticular de la médula oblongada, medial al tracto espinal del trigémino, cuyas neuronas proporcionan la inervación motora branquial de los músculos de la faringe, laringe y paladar blando a través de los nervios glosofaríngeo (IX), vago (X) y accesorio (XI). Su lesión produce disartria, disfagia y disfonía características del síndrome bulbar."
+  },
+  {
+    "svg_id": "mesencephalic_nucleus_of_trigeminal_nerve",
+    "name": "Núcleo mesencefálico del nervio trigémino",
+    "description": "Columna de neuronas pseudounipolares que se extiende desde el puente superior hasta el mesencéfalo, lateral al acueducto, y que constituye el único núcleo sensorial primario situado dentro del sistema nervioso central. Sus células reciben aferencias propioceptivas de los músculos masticadores, los músculos extraoculares y el periodonto, enviando colaterales al núcleo motor del trigémino para completar el arco del reflejo mandibular."
+  },
+  {
+    "svg_id": "principal_sensory_nucleus_of_trigeminal_nerve",
+    "name": "Núcleo sensitivo principal del nervio trigémino",
+    "description": "Situado en el tegmento del puente lateral al núcleo motor del trigémino, recibe fibras de gran diámetro del nervio trigémino que conducen tacto discriminativo y presión de la hemicara ipsilateral. Sus neuronas de segundo orden se proyectan predominantemente al núcleo ventral posteromedial del tálamo contralateral a través del lemnisco trigeminal cruzado, y en menor medida ipsilateralmente."
+  },
+  {
+    "svg_id": "spinal_nucleus_of_trigeminal_nerve",
+    "name": "Núcleo espinal del nervio trigémino",
+    "description": "Larga columna nuclear que se extiende desde el puente hasta los segmentos cervicales superiores de la médula espinal, continua del núcleo del asta posterior, donde hacen sinapsis las fibras trigeminales que conducen dolor, temperatura y tacto burdo de la cara. Sus neuronas de segundo orden cruzan y ascienden como tracto trigeminotalámico ventral hacia el núcleo ventral posteromedial del tálamo contralateral."
+  },
+  {
+    "svg_id": "superior_vestibular_nucleus",
+    "name": "Núcleo vestibular superior",
+    "description": "Situado en la porción más rostral del complejo vestibular, en el tegmento pontino bajo el piso del cuarto ventrículo, recibe aferencias principalmente de los canales semicirculares. Proyecta fundamentalmente al fascículo longitudinal medial ipsilateral para coordinar los movimientos oculares compensadores en respuesta a la rotación cefálica, interviniendo en el componente vertical y rotacional del reflejo vestibuloocular."
+  },
+  {
+    "svg_id": "medial_vestibular_nucleus",
+    "name": "Núcleo vestibular medial",
+    "description": "El mayor de los núcleos vestibulares, situado bajo el piso del cuarto ventrículo en la unión bulbopontina; recibe aferencias de los canales semicirculares y proyecta bilateralmente al fascículo longitudinal medial. Coordina los movimientos oculares compensadores mediante el reflejo vestibuloocular y contribuye al tracto vestibuloespinal medial para el control postural de la cabeza y el cuello."
+  },
+  {
+    "svg_id": "lateral_vestibular_nucleus",
+    "name": "Núcleo vestibular lateral",
+    "description": "Formado principalmente por las grandes células de Deiters, recibe aferencias del utrículo y del cerebelo, y emite el potente tracto vestibuloespinal lateral ipsilateral que desciende hasta los segmentos sacros. Facilita la actividad de las motoneuronas extensoras de los cuatro miembros, siendo fundamental para el mantenimiento de la postura erecta contra la gravedad."
+  },
+  {
+    "svg_id": "inferior_vestibular_nucleus",
+    "name": "Núcleo vestibular inferior",
+    "description": "Situado en la porción más caudal del complejo vestibular en la médula oblongada, recibe aferencias del nervio vestibular y del cerebelo. Proyecta principalmente hacia el cerebelo a través del pedúnculo cerebeloso inferior, participando en la integración de la información vestibular para el ajuste del tono muscular y el equilibrio."
+  },
+  {
+    "svg_id": "anterior_cochlear_nucleus",
+    "name": "Núcleo coclear anterior",
+    "description": "Situado en la cara ventral del pedúnculo cerebeloso inferior, recibe la mayor parte de las fibras de la división coclear del VIII par para el análisis espectral del sonido. Sus axones cruzan la línea media en el cuerpo trapezoide para hacer sinapsis en el complejo olivar superior y el lemnisco lateral contralateral, ascendiendo hacia el colículo inferior."
+  },
+  {
+    "svg_id": "posterior_cochlear_nucleus",
+    "name": "Núcleo coclear posterior",
+    "description": "Situado en la cara dorsal del pedúnculo cerebeloso inferior, recibe aferencias tonotópicas de la división coclear del VIII par para el procesamiento auditivo inicial. Sus axones cruzan la línea media en la estría acústica dorsal para alcanzar el lemnisco lateral contralateral y ascender hacia el colículo inferior."
   }
 ]
