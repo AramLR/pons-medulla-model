@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.5.0](https://github.com/AramLR/pons-medulla-model/compare/v1.3.0...v1.5.0) (2026-05-08)
+
+
+### Features
+
+* add image representing the tracts ([20a7450](https://github.com/AramLR/pons-medulla-model/commit/20a74508a514a9b26448752a09e46ab0c3e07f75))
+* add page for cranial nerves ([b399b3f](https://github.com/AramLR/pons-medulla-model/commit/b399b3fd6c2b34ed8359a2db174f52dfcf31a0b8))
+* added bib reference page ([31eceee](https://github.com/AramLR/pons-medulla-model/commit/31eceee1a55dcbc071cda931c20ef65fe8409f5a))
+* added home pages for the three brainstem parts ([d8e58f4](https://github.com/AramLR/pons-medulla-model/commit/d8e58f4ad4c5be474854f2b5eb519cb8fe51324a))
+* added reference page link to navbar ([62ead1d](https://github.com/AramLR/pons-medulla-model/commit/62ead1dfca7bf06a5f5aae5783facb311ccda032))
+* added structures description ([9127c1e](https://github.com/AramLR/pons-medulla-model/commit/9127c1e404c7397c9e1fb0b2b8311ce0c7b95910))
+* update changelog ([b20d683](https://github.com/AramLR/pons-medulla-model/commit/b20d683eb2de7d35f030e8fa03e7360338c3aa0a))
+
+
+### Bug Fixes
+
+* added missing structures: 'pie del pedunculo derecho' and tracto rubroespinal ([b9071c1](https://github.com/AramLR/pons-medulla-model/commit/b9071c18c25c8144f08762d07d070d764c7fcec3))
+* replaced 'path17' id by correct one 'pie_del_pedunculo_derecho' ([3964bf6](https://github.com/AramLR/pons-medulla-model/commit/3964bf6363cb2a2fbcfdda09e25fb57cd88fff71))
+
 ## [1.4.0](https://github.com/AramLR/pons-medulla-model/compare/v1.3.0...v1.4.0) (2026-05-04)
 
 
